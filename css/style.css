@@ -1,0 +1,30 @@
+body {
+    font-family: "Tahoma", sans-esrif; /* семейство шрифта */
+    /* margin: 0; */
+}
+
+h1 {
+    color: green; /* цвет текста */
+    background-color: coral; /* цвет фона */
+}
+
+/* обращение по селектору тега */
+img {
+    width: 500px;
+}
+
+/* обращение по селектору класса */
+.text-green {
+    color: green;
+    font-size: 48px; /* размер шрифта */
+    font-weight: 400; /* толщина шрифта */
+    line-height: 48px; /* высота строки */
+}
+
+p {
+    background-color: green;
+}
+
+div {
+    background-color: red;
+}
