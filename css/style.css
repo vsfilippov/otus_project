@@ -1,30 +1,381 @@
 body {
-    font-family: "Tahoma", sans-esrif; /* семейство шрифта */
-    /* margin: 0; */
+    margin: 0;
+    padding: 15px;
+    font-family: "Tahoma", sans-serif;
+    background: #ccc;
 }
 
-h1 {
-    color: green; /* цвет текста */
-    background-color: coral; /* цвет фона */
+.flex-container {
+    /* Feature / Multiple / 4 */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 165px;
+
+    position: relative;
+    width: 1440px;
+    height: 1168px;
+
+    /* Text / Black */
+
+    background: #0B0D17;
 }
 
-/* обращение по селектору тега */
-img {
-    width: 500px;
+.feature-list {
+    /* Features List */
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+
+    position: static;
+    width: 1110px;
+    height: 722px;
+    left: 165px;
+    top: 256px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 48px 0px;
 }
 
-/* обращение по селектору класса */
-.text-green {
-    color: green;
-    font-size: 48px; /* размер шрифта */
-    font-weight: 400; /* толщина шрифта */
-    line-height: 48px; /* высота строки */
+.row-1 {
+    /* Row 1 */
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: static;
+    width: 1110px;
+    height: 346px;
+    left: 0px;
+    top: 0px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 30px 0px;
 }
 
-p {
-    background-color: green;
+.row-2 {
+    /* Row 2 */
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: static;
+    width: 1110px;
+    height: 346px;
+    left: 0px;
+    top: 376px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 30px 0px;
+}
+.item1 {
+    /* 1 */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 32px;
+
+    position: static;
+    width: 350px;
+    height: 346px;
+    left: 0px;
+    top: 0px;
+
+    /* Default / White */
+
+    background: #FFFFFF;
+    border-radius: 8px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 30px;
 }
 
-div {
-    background-color: red;
+.item2 {
+    /* 2 */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 32px;
+
+    position: static;
+    width: 350px;
+    height: 346px;
+    left: 380px;
+    top: 0px;
+
+    /* Default / White */
+
+    background: #FFFFFF;
+    border-radius: 8px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 30px;
+}
+
+.item3 {
+    /* 3 */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 32px;
+
+    position: static;
+    width: 350px;
+    height: 346px;
+    left: 760px;
+    top: 0px;
+
+    /* Default / White */
+
+    background: #FFFFFF;
+    border-radius: 8px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 0px 30px;
+}
+
+.item4 {
+    /* 4 */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 32px;
+
+    position: static;
+    width: 350px;
+    height: 346px;
+    left: 0px;
+    top: 0px;
+
+    /* Default / White */
+
+    background: #FFFFFF;
+    border-radius: 8px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 30px;
+}
+
+.item5 {
+    /* 5 */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 32px;
+
+    position: static;
+    width: 350px;
+    height: 346px;
+    left: 380px;
+    top: 0px;
+
+    /* Default / White */
+
+    background: #FFFFFF;
+    border-radius: 8px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 30px;
+}
+
+.item6 {
+    /* 6 */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 32px;
+
+    position: static;
+    width: 350px;
+    height: 346px;
+    left: 760px;
+    top: 0px;
+
+    /* Default / White */
+
+    background: #FFFFFF;
+    border-radius: 8px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 0px 30px;
+}
+
+.title {
+    /* Section Title */
+    position: static;
+    width: 730px;
+    height: 128px;
+    left: 0px;
+    top: 0px;
+
+    /* Heading / H2 */
+
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 64px;
+    /* or 133% */
+
+    text-align: center;
+    font-feature-settings: 'liga' off;
+
+    /* Default / White */
+
+    color: #FFFFFF;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 8px 0px;
+}
+
+.button {
+    /* Responsive / Icon Label Outlined / Large */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 20px;
+
+    position: static;
+    width: 180px;
+    height: 62px;
+    left: calc(50% - 180px/2);
+    bottom: 80px;
+
+    /* Default / White */
+
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 48px 0px;
+}
+
+.button-text {
+    /* Label */
+
+
+    position: static;
+    width: 100px;
+    height: 30px;
+    left: calc(50% - 100px/2 - 20px);
+    top: calc(50% - 30px/2);
+
+    /* Label / Large Label */
+
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height, or 150% */
+
+    text-align: center;
+    font-feature-settings: 'liga' off;
+
+    /* Default / White */
+
+    color: #FFFFFF;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 16px;
+}
+
+
+.img {
+    height: 30px;
+    background: #3f51b5cf;
 }
