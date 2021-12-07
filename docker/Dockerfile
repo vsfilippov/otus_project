@@ -1,4 +1,4 @@
-FROM php:7.4.1-apache
+FROM php:8.0.6-apache
 
 ##set moscow time zone
 RUN unlink /etc/localtime
