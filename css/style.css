@@ -1,30 +1,135 @@
-body {
-    font-family: "Tahoma", sans-esrif; /* семейство шрифта */
-    /* margin: 0; */
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 83px;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 19%, rgba(255,255,255,1) 70%, rgba(242,228,228,1) 100%);
 }
 
-h1 {
-    color: green; /* цвет текста */
-    background-color: coral; /* цвет фона */
+.navbar {
+    height: 100%;
 }
 
-/* обращение по селектору тега */
-img {
-    width: 500px;
+.col-2 {
+    display: flex;
+    align-items: center;
 }
 
-/* обращение по селектору класса */
-.text-green {
-    color: green;
-    font-size: 48px; /* размер шрифта */
-    font-weight: 400; /* толщина шрифта */
-    line-height: 48px; /* высота строки */
+.icon {
+    margin-left: 10px;
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    vertical-align: top;
+    letter-spacing: 0.05em;
+    background: linear-gradient(to right, #C381DB 0%, #4E92F9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+a {
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #485466;
+}
+
+.col {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+button.sign-up {
+    width: 100px;
+    height: 36px;
+    border-radius: 20px;
+    padding: 7px 16px;
+    background: white;
+
+}
+
+span.sign-up {
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    background: linear-gradient(to right, #C381DB 0%, #4E92F9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.log {
+    width: 55px;
+    margin-right: 32px;
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #4E92F9;
+}
+
+h2 {
+    padding-top: 144px;
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 51px;
+    background: linear-gradient(to right, #C381DB 0%, #4E92F9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h3 {
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    color: #485466;
 }
 
 p {
-    background-color: green;
+    margin-top: 13px;
+    margin-bottom: 49px;
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #5A6980;
 }
 
-div {
-    background-color: red;
+.top {
+    background-color: #f2e4e4;
+    background-image: url('../img/Illusration.svg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: 100% 0;
+
+}
+
+.demo {
+    margin-bottom: 104px;
+    width: 126px;
+    border-radius: 20px;
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    background: linear-gradient(to right, #C381DB 0%, #4E92F9 100%);
+
+}
+
+.bootstrap {
+    max-width: 460px;
+}
+
+.footer {
+    height: 100vh;
+    background-color: #f2e4e4;
 }
