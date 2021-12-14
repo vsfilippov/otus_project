@@ -115,6 +115,13 @@
         </div>
     </div>
 </div>
+
+<div class="footer">
+    <?php
+    echo date('Ymd');
+    phpinfo();
+    ?>
+</div>
 </body>
 
 </html>
