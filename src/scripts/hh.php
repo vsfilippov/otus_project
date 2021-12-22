@@ -5,12 +5,19 @@ const DESCRIPTION_KEY = 4;
 const TITLE_KEY = 5;
 
 $vacancies = getAllVacancies();
+if (isset($vacancies['errors'])) {
+    die;
+}
 $vacanciesDataToInsert = parseVacancies($vacancies);
 
 $mysqli = connectToMysql();
 
 foreach ($vacanciesDataToInsert as $countryCode => $vacanciesByCountry) {
     $mysqli = changeDb($mysqli, $countryCode);
+
+    if (empty($vacanciesByCountry)) {
+        continue;
+    }
 
     $lastPost = getLastPost($mysqli);
     deleteAllOldPosts($mysqli);
@@ -63,7 +70,7 @@ function getAllVacancies()
     return $data;
 }
 
-function getVacancyData($vacancyId)
+function getVacancyData(string $vacancyId): array
 {
     $url = 'https://api.hh.ru/vacancies/' . $vacancyId;
 
@@ -88,13 +95,9 @@ function parseVacancies($vacancies)
 {
     $result = [];
     foreach ($vacancies['items'] as $vacancy) {
-        $lock = 'ru';
         $vacancyData = getVacancyData($vacancy['id']);
 
-        if (strpos($vacancyData['description'], 'Relocation to Cyprus') !== false
-            || strpos($vacancyData['description'], 'Релокация на Кипр') !== false) {
-            $lock = 'cy';
-        }
+        $lock = getVacancyLocation($vacancyData);
 
         if ($vacancyData['type']['id'] === 'open' && $vacancyData['area']['name'] === 'Санкт-Петербург') {
             $result[$lock][$vacancy['id']]['title'] = $vacancyData['name'];
@@ -109,6 +112,15 @@ function parseVacancies($vacancies)
     return $result;
 }
 
+function getVacancyLocation(array $vacancyData)
+{
+    if (strpos($vacancyData['description'], 'Relocation to Cyprus') !== false
+        || strpos($vacancyData['description'], 'Релокация на Кипр') !== false) {
+        return 'cy';
+    }
+    return 'ru';
+}
+
 //Mysql functions
 function connectToMysql()
 {
@@ -117,16 +129,15 @@ function connectToMysql()
     $password = "vrbzw4kQHYQPm";
     $mysqli = new mysqli($hostname, $username, $password);
 
-    $mysqli = changeDb($mysqli, 'ru');
-    return $mysqli;
+    return changeDb($mysqli, 'ru');
 }
 
-function changeDb($mysqli, $country = null)
+function changeDb($mysqli, $country = 'ru')
 {
-    $dbname['ru'] = "wordpress_russia";
-    $dbname['cy'] = "wordpress_cyprus";
+    $dbName['ru'] = "wordpress_russia";
+    $dbName['cy'] = "wordpress_cyprus";
 
-    $selectedDb = isset($dbname[$country]) ? $dbname[$country] : $dbname['ru'];
+    $selectedDb = $dbName[$country];
     mysqli_select_db($mysqli, $selectedDb);
     $mysqli->query("SET NAMES 'utf8'");
 
