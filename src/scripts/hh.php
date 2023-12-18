@@ -124,9 +124,9 @@ function getVacancyLocation(array $vacancyData)
 //Mysql functions
 function connectToMysql()
 {
-    $hostname = "5.11.87.23";
-    $username = "wpswat";
-    $password = "vrbzw4kQHYQPm";
+    $hostname = "127.0.0.1";
+    $username = "wordpress";
+    $password = "password";
     $mysqli = new mysqli($hostname, $username, $password);
 
     return changeDb($mysqli, 'ru');
